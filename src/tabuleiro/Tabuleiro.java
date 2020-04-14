@@ -8,7 +8,7 @@ public class Tabuleiro {
 
 	public Tabuleiro(int linhas, int colunas) {
 		if (linhas < 1 || colunas < 1) {
-			throw new ExcecaoTabuleiro("Erro na criação do tabuleiro, deve conter no mínimo 1 linha e 1 coluna");
+			throw new ExcecaoTabuleiro("Erro na criação do tabuleiro, deve conter no mínimo 1 linha e 1 coluna.");
 		}
 		this.linhas = linhas;
 		this.colunas = colunas;
@@ -25,14 +25,14 @@ public class Tabuleiro {
 	
 	public Peca peca(int linha, int coluna) {
 		if (!posicaoExistente(linha, coluna)) {
-			throw new ExcecaoTabuleiro("Posição não está no tabuleiro");
+			throw new ExcecaoTabuleiro("Posição não está no tabuleiro.");
 		}
 		return pecas[linha][coluna];
 	}
 	
 	public Peca peca(Position posicao) {
 		if (!posicaoExistente(posicao)) {
-			throw new ExcecaoTabuleiro("Posição não está no tabuleiro");
+			throw new ExcecaoTabuleiro("Posição não está no tabuleiro.");
 		}
 		return pecas[posicao.getLinha()][posicao.getColuna()];
 	}
@@ -55,7 +55,7 @@ public class Tabuleiro {
 	
 	public boolean temUmaPeca(Position posicao) {
 		if (!posicaoExistente(posicao)) {
-			throw new ExcecaoTabuleiro("Posição não está no tabuleiro");
+			throw new ExcecaoTabuleiro("Posição não está no tabuleiro.");
 		}
 		return peca(posicao) != null;
 	}
