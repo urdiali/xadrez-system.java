@@ -1,5 +1,7 @@
 package xadrez;
 
+import java.awt.Color;
+
 import tabuleiro.Tabuleiro;
 import xadrez.pecas.Rei;
 import xadrez.pecas.Torre;
@@ -28,9 +30,19 @@ public class PartidaDeXadrez {
 	}
 	
 	private void initialSetup() {
-		novaPosicao('b', 6, new Torre(tabuleiro, Cor.WHITE));
-		novaPosicao('e', 8, new Rei(tabuleiro, Cor.BLACK));
-		novaPosicao('e', 1, new Rei(tabuleiro, Cor.WHITE));
+		novaPosicao('c', 1, new Torre(tabuleiro, Cor.WHITE));
+		novaPosicao('c', 2, new Torre(tabuleiro, Cor.WHITE));
+		novaPosicao('d', 2, new Torre(tabuleiro, Cor.WHITE));
+		novaPosicao('e', 2, new Torre(tabuleiro, Cor.WHITE));
+		novaPosicao('e', 1, new Torre(tabuleiro, Cor.WHITE));
+		novaPosicao('d', 1, new Rei(tabuleiro, Cor.WHITE));
+
+		novaPosicao('c', 1, new Torre(tabuleiro, Cor.BLACK));
+		novaPosicao('c', 2, new Torre(tabuleiro, Cor.BLACK));
+		novaPosicao('d', 2, new Torre(tabuleiro, Cor.BLACK));
+		novaPosicao('e', 2, new Torre(tabuleiro, Cor.BLACK));
+		novaPosicao('e', 1, new Torre(tabuleiro, Cor.BLACK));
+		novaPosicao('d', 1, new Rei(tabuleiro, Cor.BLACK));
 	}
 
 }
